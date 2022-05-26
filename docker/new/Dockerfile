@@ -12,4 +12,4 @@ RUN set -eux && \
     echo ${TZ} > /etc/timezone
 
 # php.ini
-COPY docker/7_4_29/php.ini /usr/local/etc/php/php.ini
+COPY docker/new/php.ini /usr/local/etc/php/php.ini
