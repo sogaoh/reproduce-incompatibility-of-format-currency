@@ -1,4 +1,4 @@
-FROM php:8.0.19-fpm-alpine
+FROM php:8.1.6-fpm-alpine
 
 RUN apk update && \
     apk add --no-cache icu-dev oniguruma-dev && \
