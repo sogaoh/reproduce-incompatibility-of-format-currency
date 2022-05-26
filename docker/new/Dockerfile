@@ -1,7 +1,7 @@
 FROM php:7.4.29-fpm-alpine
 
 RUN apk update && \
-    apk add --no-cache icu-dev oniguruma-dev && \
+    apk add --no-cache icu-data-full icu-dev oniguruma-dev && \
     docker-php-ext-install intl mbstring
 
 # TimeZone
