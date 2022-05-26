@@ -3,6 +3,9 @@
 ## Process to reproduce
 
 ```
+git clone https://github.com/sogaoh/reproduce-incompatibility-of-format-currency.git
+cd reproduce-incompatibility-of-format-currency
+
 docker-compose up -d
 make run
 ```
