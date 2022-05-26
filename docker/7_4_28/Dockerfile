@@ -1,9 +1,5 @@
 FROM php:7.4.28-fpm-alpine
 
-# RUN apk update && \
-#     apk add --no-cache icu-dev libzip-dev git zip unzip oniguruma-dev && \
-#     docker-php-ext-install intl mbstring zip bcmath opcache
-
 RUN apk update && \
     apk add --no-cache icu-dev oniguruma-dev && \
     docker-php-ext-install intl mbstring
