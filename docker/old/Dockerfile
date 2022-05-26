@@ -1,4 +1,4 @@
-FROM php:7.4.29-fpm-alpine
+FROM php:8.0.18-fpm-alpine
 
 RUN apk update && \
     apk add --no-cache icu-dev oniguruma-dev && \
@@ -12,4 +12,4 @@ RUN set -eux && \
     echo ${TZ} > /etc/timezone
 
 # php.ini
-COPY docker/7_4_29/php.ini /usr/local/etc/php/php.ini
+COPY docker/old/php.ini /usr/local/etc/php/php.ini

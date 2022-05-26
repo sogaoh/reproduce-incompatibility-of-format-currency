@@ -4,7 +4,7 @@ services:
   new:
     build:
       context: .
-      dockerfile: ./docker/7_4_29/Dockerfile
+      dockerfile: ./docker/new/Dockerfile
       args:
         - TZ=Asia/Tokyo
     volumes:
@@ -14,7 +14,7 @@ services:
   old:
     build:
       context: .
-      dockerfile: ./docker/7_4_28/Dockerfile
+      dockerfile: ./docker/old/Dockerfile
       args:
         - TZ=Asia/Tokyo
     volumes:
