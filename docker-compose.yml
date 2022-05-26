@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  new:
+    build:
+      context: .
+      dockerfile: ./docker/7_4_29/Dockerfile
+      args:
+        - TZ=Asia/Tokyo
+    volumes:
+      - ./code:/work    
+    working_dir: /work
+
+  old:
+    build:
+      context: .
+      dockerfile: ./docker/7_4_28/Dockerfile
+      args:
+        - TZ=Asia/Tokyo
+    volumes:
+      - ./code:/work    
+    working_dir: /work

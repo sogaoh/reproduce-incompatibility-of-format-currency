@@ -1,0 +1,19 @@
+FROM php:7.4.29-fpm-alpine
+
+# RUN apk update && \
+#     apk add --no-cache icu-dev libzip-dev git zip unzip oniguruma-dev && \
+#     docker-php-ext-install intl mbstring zip bcmath opcache
+
+RUN apk update && \
+    apk add --no-cache icu-dev oniguruma-dev && \
+    docker-php-ext-install intl mbstring
+
+# TimeZone
+ARG TZ
+RUN set -eux && \
+    apk add --no-cache tzdata && \
+    cp -r /usr/share/zoneinfo/${TZ} /etc/localtime && \
+    echo ${TZ} > /etc/timezone
+
+# php.ini
+COPY docker/7_4_29/php.ini /usr/local/etc/php/php.ini
